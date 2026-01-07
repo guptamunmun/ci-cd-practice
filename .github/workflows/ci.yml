@@ -29,10 +29,10 @@ jobs:
       - name: Run tests
         run: npm test
 
-        deploy:
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-    - name: Deploy step
-      run: echo "Deploying application..."
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Deploy step
+        run: echo "Deploying application..."
